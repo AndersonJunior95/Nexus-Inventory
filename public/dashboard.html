@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nexus Inventory - Dashboard</title>
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+  <body>
+    
+    <div class="dashboard-layout">
+      
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo-box small">
+            <span class="material-symbols-outlined">inventory_2</span>
+          </div>
+          <span class="brand-name">Nexus</span>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Visão Geral</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">devices</span>
+            <span>Ativos</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">group</span>
+            <span>Usuários</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="material-symbols-outlined">bar_chart</span>
+            <span>Relatórios</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-profile">
+            <img src="https://i.pravatar.cc/150?u=12" alt="Admin" class="avatar-small">
+            <div class="user-info">
+              <strong>Sarah Jenkins</strong>
+              <span>Admin</span>
+            </div>
+          </div>
+          <button class="logout-btn" onclick="window.location.href='index.html'" title="Sair">
+            <span class="material-symbols-outlined">logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        
+        <header class="top-bar">
+          <div class="welcome-text">
+            <h2>Bom dia, Sarah</h2>
+            <p>Resumo do inventário de TI hoje.</p>
+          </div>
+          
+          <div class="header-actions">
+            <div class="search-box">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Buscar ativos, serial, usuário...">
+            </div>
+            <button class="icon-btn-header">
+              <span class="material-symbols-outlined">notifications</span>
+              <span class="badge-dot"></span>
+            </button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-label">Total de Ativos</span>
+              <div class="icon-box soft-teal">
+                <span class="material-symbols-outlined">computer</span>
+              </div>
+            </div>
+            <div class="stat-number" id="kpi-total-assets">---</div>
+            <div class="stat-footer positive">
+              <span class="material-symbols-outlined">trending_up</span>
+              <span>+12% vs mês anterior</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-label">Em Uso</span>
+              <div class="icon-box soft-blue">
+                <span class="material-symbols-outlined">donut_large</span>
+              </div>
+            </div>
+            <div class="stat-number" id="kpi-in-use">---</div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 85%"></div>
+            </div>
+            <div class="stat-footer">
+              <span>1,054 alocados</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-label">Manutenção</span>
+              <div class="icon-box soft-orange">
+                <span class="material-symbols-outlined">build</span>
+              </div>
+            </div>
+            <div class="stat-number" id="kpi-maintenance">---</div>
+            <div class="stat-footer warning">
+              <span class="material-symbols-outlined">warning</span>
+              <span>Ação Necessária</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-label">Usuários</span>
+              <div class="icon-box soft-purple">
+                <span class="material-symbols-outlined">groups</span>
+              </div>
+            </div>
+            <div class="stat-number" id="kpi-users">---</div>
+            <div class="avatars-group">
+               <img src="https://i.pravatar.cc/150?u=20">
+               <img src="https://i.pravatar.cc/150?u=21">
+               <div class="avatar-more">+42</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="content-split">
+          
+          <section class="activity-section card-panel">
+            <div class="panel-header">
+              <h3>Atividade Recente</h3>
+              <a href="#" class="link-btn">Ver tudo</a>
+            </div>
+            
+            <div class="activity-list">
+              <div class="activity-item">
+                <img src="https://i.pravatar.cc/150?u=30" class="avatar-medium">
+                <div class="activity-details">
+                  <p><strong>Michael Chen</strong> retirou <strong>MacBook Pro M2</strong></p>
+                  <span class="timestamp">Há 2 min • Serial: C02FGH...</span>
+                </div>
+                <span class="status-pill blue">Saída</span>
+              </div>
+
+              <div class="activity-item">
+                <div class="avatar-placeholder purple">JS</div>
+                <div class="activity-details">
+                  <p><strong>Jessica Smith</strong> devolveu <strong>Dell XPS 15</strong></p>
+                  <span class="timestamp">Há 1h • Motivo: Upgrade</span>
+                </div>
+                <span class="status-pill green">Disponível</span>
+              </div>
+
+              <div class="activity-item">
+                <img src="https://i.pravatar.cc/150?u=33" class="avatar-medium">
+                <div class="activity-details">
+                  <p><strong>David Wilson</strong> reportou defeito <strong>Mouse MX</strong></p>
+                  <span class="timestamp">Há 3h • "Scroll travado"</span>
+                </div>
+                <span class="status-pill orange">Manutenção</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="quick-actions-section">
+            <h3>Ações Rápidas</h3>
+            <div class="actions-grid">
+              
+              <button class="action-card primary">
+                <div class="icon-circle white">
+                  <span class="material-symbols-outlined">output</span>
+                </div>
+                <div class="action-info">
+                  <strong>Check-out</strong>
+                  <span>Emprestar</span>
+                </div>
+                <span class="material-symbols-outlined arrow">chevron_right</span>
+              </button>
+
+              <button class="action-card">
+                <div class="icon-circle teal">
+                  <span class="material-symbols-outlined">input</span>
+                </div>
+                <div class="action-info">
+                  <strong>Check-in</strong>
+                  <span>Devolver</span>
+                </div>
+              </button>
+
+              <button class="action-card">
+                <div class="icon-circle red">
+                  <span class="material-symbols-outlined">report_problem</span>
+                </div>
+                <div class="action-info">
+                  <strong>Reportar</strong>
+                  <span>Defeito</span>
+                </div>
+              </button>
+
+               <button class="action-card dashed">
+                <span class="material-symbols-outlined">add</span>
+                <strong>Novo Ativo</strong>
+              </button>
+
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

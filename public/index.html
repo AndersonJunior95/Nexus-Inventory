@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nexus Inventory - Login</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="hero-section">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <div class="brand">
+            <div class="logo-box">
+              <span class="material-symbols-outlined">inventory_2</span>
+            </div>
+            <span class="brand-name">Nexus Inventory</span>
+          </div>
+
+          <div class="hero-text">
+            <h1>Gerencie seus ativos com clareza.</h1>
+            <p>
+              Centralize o inventário de TI e rastreie o ciclo de vida dos
+              equipamentos em uma plataforma unificada.
+            </p>
+
+            <div class="social-proof">
+              <div class="avatars">
+                <img src="https://i.pravatar.cc/150?u=1" alt="User 1" />
+                <img src="https://i.pravatar.cc/150?u=2" alt="User 2" />
+                <img src="https://i.pravatar.cc/150?u=3" alt="User 3" />
+              </div>
+              <span>Usado por +2.000 times</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-section">
+        <div class="login-wrapper animate-fade-up">
+          <div class="login-header">
+            <h2>Bem-vindo</h2>
+            <p>Entre com suas credenciais para acessar.</p>
+          </div>
+
+          <form class="login-form" id="login-form">
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <div class="input-wrapper">
+                <span class="material-symbols-outlined input-icon">mail</span>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="nome@empresa.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="label-row">
+                <label for="password">Senha</label>
+              </div>
+              <div class="input-wrapper">
+                <span class="material-symbols-outlined input-icon">lock</span>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="••••••••"
+                  required
+                />
+                <button type="button" id="togglePassword" class="icon-btn">
+                  <span class="material-symbols-outlined">visibility</span>
+                </button>
+              </div>
+              <a href="#" class="forgot-link">Esqueceu?</a>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              <span>Entrar</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </form>
+
+          <div class="footer-text">Nexus Inventory v1.0</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
