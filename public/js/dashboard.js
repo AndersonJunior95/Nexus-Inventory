@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const kpiUsersElements = document.getElementById("kpi-users");
   const activityListElement = document.getElementById("activity-list");
   const searchInput = document.getElementById("search-input");
+<<<<<<< HEAD
   const logoutBtn = document.querySelector(".logout-btn");
   const checkoutBtn = document.querySelector(".action-card.primary");
   const actionCards = document.querySelectorAll(".action-card:not(.primary):not(.dashed)");
@@ -36,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const welcomeName = document.querySelector(".welcome-text h2");
   const sidebarName = document.querySelector(".user-info strong");
   const currentHour = new Date().getHours();
+=======
+>>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b
 
   /* Renderização das tabelas */
 
@@ -45,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   kpiUsersElements.textContent = dashboardData.kpis.activeUsers;
   kpiTotalElements.textContent = dashboardData.kpis.totalAssets;
 
+<<<<<<< HEAD
   /* Horário Manha, Tarde e Noite */
 
   function getHoursDay(hour) {
@@ -71,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+=======
+>>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b
   /* Utilizando o MAP */
 
   function renderActivities(listItems) {
@@ -114,11 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchTerm = e.target.value.toLowerCase();
 
     const filteredActivities = dashboardData.recentActivities.filter((activity) => {
+<<<<<<< HEAD
       return activity.user.toLowerCase().includes(searchTerm) ||
+=======
+        return activity.user.toLowerCase().includes(searchTerm) || 
+>>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b
         activity.device.toLowerCase().includes(searchTerm);
     });
     renderActivities(filteredActivities);
   });
+<<<<<<< HEAD
 
   /* Logout */
   if (logoutBtn) {
@@ -163,3 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+=======
+});
+>>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b

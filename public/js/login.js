@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+<<<<<<< HEAD
       /* Simulando alguns dados */
 
       const user = {
@@ -45,4 +46,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+=======
+      window.location.href = "dashboard.html";
+    });
+  }
+
+  if (toggleBtn && passwordInput) {
+    toggleBtn.addEventListener("click", () => {
+      const tipoAtual = passwordInput.getAttribute("type");
+      const iconSpan = toggleBtn.querySelector("span");
+
+      if (tipoAtual === "password") {
+        passwordInput.setAttribute("type", "text");
+        iconSpan.textContent = "visibility_off";
+      } else {
+        passwordInput.setAttribute("type", "password");
+        iconSpan.textContent = "visibility";
+      }
+    });
+  }
+
+  
+>>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b
 });
