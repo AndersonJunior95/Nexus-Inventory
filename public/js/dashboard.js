@@ -48,35 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   kpiUsersElements.textContent = dashboardData.kpis.activeUsers;
   kpiTotalElements.textContent = dashboardData.kpis.totalAssets;
 
-<<<<<<< HEAD
-  /* Horário Manha, Tarde e Noite */
-
-  function getHoursDay(hour) {
-    if (hour >= 5 && hour < 12) {
-      return "Bom dia";
-    }
-    if (hour >= 12 && hour < 18) {
-      return "Boa tarde";
-    }
-    return "Boa noite";
-  }
-  /* Renderizando user */
-
-  if (!rawData) {
-    window.location.href = "./index.html";
-    return;
-  }
-
-  if (welcomeName) {
-    const greeting = getHoursDay(currentHour);
-    welcomeName.innerHTML = `${greeting}, ${user.user}!`;
-  }
-  if (sidebarName) sidebarName.textContent = user.user;
-
-
-
-=======
->>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b
   /* Utilizando o MAP */
 
   function renderActivities(listItems) {
