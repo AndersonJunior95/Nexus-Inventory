@@ -7,65 +7,41 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value.trim();
+      const emailValue = document.getElementById("email").value.trim();
+      const passwordValue = document.getElementById("password").value.trim();
 
-      console.log("Email digitado: ", email);
+      const storedUser = JSON.parse(localStorage.getItem("nexus_registered_user"));
 
-      if (!email || !password) {
-        alert("Por favor, preencha todas as informações");
+      if (!storedUser) {
+        alert("Nenhum usuário cadastrado no sistema. Vá para a página de cadastro.");
         return;
       }
 
-<<<<<<< HEAD
-      /* Simulando alguns dados */
+      if (emailValue === storedUser.email && passwordValue === storedUser.password) {
+        const sessionUser = {
+          user: storedUser.name,
+          role: storedUser.role || "User",
+          email: storedUser.email,
+        };
 
-      const user = {
-        user: "Sarah Jenkins",
-        role: "Admin",
-        email: email
-      };
-
-      localStorage.setItem('nexus_user', JSON.stringify(user));
-
-      window.location.href = "dashboard.html";
-    });
-
-    if (toggleBtn && passwordInput) {
-      toggleBtn.addEventListener("click", () => {
-        const tipoAtual = passwordInput.getAttribute("type");
-        const iconSpan = toggleBtn.querySelector("span");
-
-        if (tipoAtual === "password") {
-          passwordInput.setAttribute("type", "text");
-          iconSpan.textContent = "visibility_off";
-        } else {
-          passwordInput.setAttribute("type", "password");
-          iconSpan.textContent = "visibility";
-        }
-      });
-    }
-  }
-=======
-      window.location.href = "dashboard.html";
+        localStorage.setItem("nexus_user", JSON.stringify(sessionUser));
+        
+        window.location.href = "dashboard.html";
+      } else {
+        alert("E-mail ou senha incorretos.");
+      }
     });
   }
 
   if (toggleBtn && passwordInput) {
     toggleBtn.addEventListener("click", () => {
-      const tipoAtual = passwordInput.getAttribute("type");
+      const isPassword = passwordInput.type === "password";
+      passwordInput.type = isPassword ? "text" : "password";
+      
       const iconSpan = toggleBtn.querySelector("span");
-
-      if (tipoAtual === "password") {
-        passwordInput.setAttribute("type", "text");
-        iconSpan.textContent = "visibility_off";
-      } else {
-        passwordInput.setAttribute("type", "password");
-        iconSpan.textContent = "visibility";
+      if (iconSpan) {
+        iconSpan.textContent = isPassword ? "visibility_off" : "visibility";
       }
     });
   }
-
-  
->>>>>>> d64332f6caddd37b70870bcdbe7faafbffefeb1b
 });

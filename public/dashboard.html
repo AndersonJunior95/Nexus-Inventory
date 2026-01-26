@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Nexus Inventory - Dashboard</title>
-    
+
     <link rel="stylesheet" href="./css/style.css" />
-    
     <link rel="stylesheet" href="./css/dashboard.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div class="dashboard-layout">
@@ -40,30 +41,29 @@
 
         <div class="sidebar-footer">
           <div class="user-profile">
-            <img src="https://i.pravatar.cc/150?u=12" alt="Admin" class="avatar-small">
+            <img src="https://i.pravatar.cc/150?u=12" alt="Avatar" class="avatar-small" />
             <div class="user-info">
               <strong>Sarah Jenkins</strong>
               <span>Admin</span>
             </div>
           </div>
-          <button class="logout-btn" onclick="window.location.href='index.html'" title="Sair">
+          <button class="logout-btn" title="Sair">
             <span class="material-symbols-outlined">logout</span>
           </button>
         </div>
       </aside>
 
       <main class="main-content">
-        
         <header class="top-bar">
           <div class="welcome-text">
             <h2>Bom dia, Sarah</h2>
             <p>Resumo do inventário de TI hoje.</p>
           </div>
-          
+
           <div class="header-actions">
             <div class="search-box">
               <span class="material-symbols-outlined">search</span>
-              <input type="text" id="search-input" placeholder="Buscar ativos, serial, usuário...">
+              <input type="text" id="search-input" placeholder="Buscar ativos, serial, usuário..." />
             </div>
             <button class="icon-btn-header">
               <span class="material-symbols-outlined">notifications</span>
@@ -126,55 +126,26 @@
             </div>
             <div class="stat-number" id="kpi-users">---</div>
             <div class="avatars-group">
-               <img src="https://i.pravatar.cc/150?u=20">
-               <img src="https://i.pravatar.cc/150?u=21">
-               <div class="avatar-more">+42</div>
+              <img src="https://i.pravatar.cc/150?u=20" />
+              <img src="https://i.pravatar.cc/150?u=21" />
+              <div class="avatar-more">+42</div>
             </div>
           </div>
         </section>
 
         <div class="content-split">
-          
           <section class="activity-section card-panel">
             <div class="panel-header">
               <h3>Atividade Recente</h3>
               <a href="#" class="link-btn">Ver tudo</a>
             </div>
-            
             <div class="activity-list" id="activity-list">
-              <div class="activity-item">
-                <img src="https://i.pravatar.cc/150?u=30" class="avatar-medium">
-                <div class="activity-details">
-                  <p><strong>Michael Chen</strong> retirou <strong>MacBook Pro M2</strong></p>
-                  <span class="timestamp">Há 2 min • Serial: C02FGH...</span>
                 </div>
-                <span class="status-pill blue">Saída</span>
-              </div>
-
-              <div class="activity-item">
-                <div class="avatar-placeholder purple">JS</div>
-                <div class="activity-details">
-                  <p><strong>Jessica Smith</strong> devolveu <strong>Dell XPS 15</strong></p>
-                  <span class="timestamp">Há 1h • Motivo: Upgrade</span>
-                </div>
-                <span class="status-pill green">Disponível</span>
-              </div>
-
-              <div class="activity-item">
-                <img src="https://i.pravatar.cc/150?u=33" class="avatar-medium">
-                <div class="activity-details">
-                  <p><strong>David Wilson</strong> reportou defeito <strong>Mouse MX</strong></p>
-                  <span class="timestamp">Há 3h • "Scroll travado"</span>
-                </div>
-                <span class="status-pill orange">Manutenção</span>
-              </div>
-            </div>
           </section>
 
           <section class="quick-actions-section">
             <h3>Ações Rápidas</h3>
             <div class="actions-grid">
-              
               <button class="action-card primary">
                 <div class="icon-circle white">
                   <span class="material-symbols-outlined">output</span>
@@ -206,17 +177,36 @@
                 </div>
               </button>
 
-               <button class="action-card dashed">
+              <button class="action-card dashed">
                 <span class="material-symbols-outlined">add</span>
                 <strong>Novo Ativo</strong>
               </button>
-
             </div>
           </section>
         </div>
-
       </main>
     </div>
+
+    <div id="modal-action" class="modal-overlay" style="display: none">
+      <div class="modal-content animate-fade-up">
+        <div class="modal-header">
+          <h3 id="modal-title">Título do Modal</h3>
+          <button id="close-modal" class="icon-btn-header" style="box-shadow: none">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <form id="modal-form" class="modal-body">
+          <div id="form-dynamic-content" style="display: flex; flex-direction: column; gap: 1rem">
+              </div>
+
+          <div class="modal-actions">
+            <button type="button" id="btn-cancel" class="btn-secondary">Cancelar</button>
+            <button type="submit" class="btn-primary" style="margin-top: 0; padding: 0 20px;">Confirmar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script src="./js/dashboard.js"></script>
   </body>
 </html>
