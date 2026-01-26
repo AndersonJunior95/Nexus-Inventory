@@ -1,0 +1,25 @@
+{
+  "name": "nexus-inventory",
+  "version": "1.0.0",
+  "description": "![Project Status](https://img.shields.io/badge/status-em_desenvolvimento-orange?style=for-the-badge)\r ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndersonJunior95/Nexus-Inventory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AndersonJunior95/Nexus-Inventory/issues"
+  },
+  "homepage": "https://github.com/AndersonJunior95/Nexus-Inventory#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
